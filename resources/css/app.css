@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background: #141414;
+}
+.formbold-main-wrapper {
+    @apply flex flex-col justify-center items-center p-3 xl:p-16;
+}
+
+.formbold-form-wrapper {
+    margin: 0 auto;
+    max-width: 550px;
+    width: 100%;
+    background: white;
+}
+
+
+.formbold-event-wrapper h3 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    color: #07074d;
+
+    margin-bottom: 15px;
+}
+.formbold-event-wrapper h4 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #07074d;
+    width: 60%;
+    margin: 25px 0 15px;
+}
+.formbold-event-wrapper p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #536387;
+}
+
+.formbold-event-details {
+    background: #fafafa;
+    border: 1px solid #dde3ec;
+    border-radius: 5px;
+    margin: 25px 0 30px;
+}
+.formbold-event-details h5 {
+    color: #07074d;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 15px 25px;
+}
+.formbold-event-details ul {
+    border-top: 1px solid #edeef2;
+    padding: 25px;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 14px;
+}
+.formbold-event-details ul li {
+    color: #536387;
+    font-size: 16px;
+    line-height: 24px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.formbold-form-title {
+    @apply xl:text-[28px] text-[20px] xl:leading-[35px] leading-[25px];
+    color: #07074d;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.formbold-input-flex {
+    @apply xl:flex gap-6;
+}
+.formbold-input-flex > div {
+    width: 100%;
+}
+.formbold-form-input {
+    text-align: left;
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 2px;
+    border: 1px solid #abacae;
+    background: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    color: #151f35;
+    outline: none;
+    resize: none;
+}
+.formbold-form-input:focus {
+    border-color: #17a894;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+.formbold-form-label {
+    color: #091632;
+    font-size: 14px;
+    line-height: 24px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.formbold-policy {
+    font-size: 14px;
+    line-height: 24px;
+    color: #536387;
+    width: 70%;
+    margin-top: 22px;
+}
+.formbold-policy a {
+    color: #17a894;
+}
+.formbold-btn {
+    @apply text-center w-full text-sm rounded-md px-6 py-3 xl:py-3.5 border-none bg-primary font-semibold text-white;
+
+}
+.formbold-btn-pre
+{
+    @apply text-center w-full text-sm rounded-md px-6 py-3 xl:py-3.5 border-none bg-[#577769] font-semibold
+    text-white;
+}
+.formbold-btn:hover, .formbold-btn-pre:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    @apply bg-opacity-60 duration-300 transition-all scale-95;
+}
+.progress-container {
+    position: relative;
+    background-color: #f3f4f6;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #17a894; /* Primary color */
+    transition: width 0.3s ease;
+}
+
+.progress-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #4b5563;
+}
+
+:root {
+    --animation-speed: 40s;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(100%); /* Start from the far right */
+    }
+    100% {
+        transform: translateX(calc(-250px * 7)); /* Move to the left */
+    }
+}
+
+.slider {
+    @apply h-[130px] mt-10 mx-auto overflow-hidden relative w-full bg-white;
+}
+
+.slider .slide-track {
+    @apply flex relative;
+    animation: scroll var(--animation-speed) linear infinite;
+}
+
+.slider .slide {
+    @apply h-[100px] w-[250px] flex-shrink-0 flex items-center p-8 mt-2 justify-center;
+}
