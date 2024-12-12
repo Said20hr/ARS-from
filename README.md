@@ -1,102 +1,97 @@
-# Filament Demo App
+# README: Algeria Rise Summit (ARS) 2024 Registration Application
 
-A demo application to illustrate how Filament Admin works.
+## **Project Overview**
+The Algeria Rise Summit (ARS) 2024 Registration Application is a web-based solution designed to streamline participant registration for the Algeria Rise Summit. It features a responsive, multi-step form to collect and manage attendee data efficiently. The application is built using Laravel, Livewire, and integrates with Filament for backend administration.
 
-![Filament Demo](https://github.com/filamentphp/demo/assets/171715/899161a9-3c85-4dc9-9599-13928d3a4412)
+---
 
-[Open in Gitpod](https://gitpod.io/#https://github.com/filamentphp/demo) to edit it and preview your changes with no setup required.
+## **Features**
+- **Multi-Step Registration Form**:
+    - Step-by-step flow for user-friendly data entry.
+    - Dynamic progress bar to show completion percentage.
+    - Contextual step indicators for guidance.
 
-## Installation
+- **Responsive Design**:
+    - Optimized for desktop, tablet, and mobile devices.
 
-Clone the repo locally:
+- **Dynamic Field Behavior**:
+    - Conditional fields based on user input (e.g., specifying "Other" industry or referral source).
 
-```sh
-git clone https://github.com/laravel-filament/demo.git filament-demo && cd filament-demo
-```
+- **Real-Time Validation**:
+    - Provides instant feedback for incomplete or incorrect entries.
 
-Install PHP dependencies:
+- **Success Notification**:
+    - Displays a confirmation message upon successful submission.
 
-```sh
-composer install
-```
+- **Filament Admin Dashboard**:
+    - Enables administrators to view, filter, and manage submitted registrations.
 
-Setup configuration:
+---
 
-```sh
-cp .env.example .env
-```
+## **Technologies Used**
+- **Frontend**:
+    - Blade Templates for dynamic page rendering.
+    - Tailwind CSS for styling.
 
-Generate application key:
+- **Backend**:
+    - Laravel Framework for core functionality.
+    - Livewire for real-time form handling.
+    - Filament for backend administration.
 
-```sh
-php artisan key:generate
-```
+- **Database**:
+    - MySQL/PostgreSQL for storing registration data.
 
-Create an SQLite database. You can also use another database (MySQL, Postgres), simply update your configuration accordingly.
+---
 
-```sh
-touch database/database.sqlite
-```
+## **User Workflow**
+1. **Form Access**:
+    - Users visit the registration page to start the process.
 
-Run database migrations:
+2. **Step-by-Step Completion**:
+    - Users complete the form across four steps:
+        - Step 1: Personal Information
+        - Step 2: Professional Information
+        - Step 3: Motivation for Participation
+        - Step 4: Additional Information
 
-```sh
-php artisan migrate
-```
+3. **Dynamic Feedback**:
+    - Real-time validation and feedback for required fields.
 
-Run database seeder:
+4. **Submission**:
+    - Upon successful form completion, the data is securely stored, and a confirmation message is displayed.
 
-```sh
-php artisan db:seed
-```
+5. **Admin Management**:
+    - Administrators access the Filament dashboard to review, approve, or reject applications.
 
-> **Note**  
-> If you get an "Invalid datetime format (1292)" error, this is probably related to the timezone setting of your database.  
-> Please see https://dba.stackexchange.com/questions/234270/incorrect-datetime-value-mysql
+---
 
+## **Deployment**
+- **Hosting Requirements**:
+    - A web server with PHP 8.1+ and Laravel setup.
+    - Database server (MySQL/PostgreSQL) for storing registration data.
 
-Create a symlink to the storage:
+- **Frontend**:
+    - Deployed as part of the Laravel application with Livewire.
 
-```sh
-php artisan storage:link
-```
+- **Backend**:
+    - Managed through Filament, hosted on the same Laravel server.
 
-Run the dev server (the output will give the address):
+---
 
-```sh
-php artisan serve
-```
+## **Future Enhancements**
+1. **Email Notifications**:
+    - Notify users upon form submission and approval/rejection.
 
-You're ready to go! Visit the url in your browser, and login with:
+2. **Integration**:
+    - Connect with CRM tools for streamlined attendee management.
 
--   **Username:** admin@filamentphp.com
--   **Password:** password
+3. **Analytics Dashboard**:
+    - Add metrics for demographics and other registration data insights.
 
-## Features to explore
+4. **Payment Integration**:
+    - Enable payment processing for event ticketing if required.
 
-### Relations
+---
 
-#### BelongsTo
-- ProductResource
-- OrderResource
-- PostResource
-
-#### BelongsToMany
-- CategoryResource\RelationManagers\ProductsRelationManager
-
-#### HasMany
-- OrderResource\RelationManagers\PaymentsRelationManager
-
-#### HasManyThrough
-- CustomerResource\RelationManagers\PaymentsRelationManager
-
-#### MorphOne
-- OrderResource -> Address
-
-#### MorphMany
-- ProductResource\RelationManagers\CommentsRelationManager
-- PostResource\RelationManagers\CommentsRelationManager
-
-#### MorphToMany
-- BrandResource\RelationManagers\AddressRelationManager
-- CustomerResource\RelationManagers\AddressRelationManager
+## **Contact**
+For support or inquiries, please contact the project maintainer at **support@algeriarisesummit.com**.
